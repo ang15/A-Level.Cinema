@@ -1,0 +1,10 @@
+﻿@model Cinema.EF.DataModel.Film
+
+<h2>Update</h2>
+
+@using (Html.BeginForm("Delete", "Film", FormMethod.Post))
+{
+    @Html.Partial("Parttials/Film")
+
+    <input type="submit" name="Удалить" />
+}

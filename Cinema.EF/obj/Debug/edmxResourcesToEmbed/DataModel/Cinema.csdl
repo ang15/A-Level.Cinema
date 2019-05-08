@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CinemaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Films" Relationship="Self.FilmCountry" FromRole="Country" ToRole="Film" />
+  </EntityType>
+  <EntityType Name="Film">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ScrennShoots" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Duration" Type="Double" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <NavigationProperty Name="Film_session" Relationship="Self.FK_Film_session_Film" FromRole="Film" ToRole="Film_session" />
+    <NavigationProperty Name="Countries" Relationship="Self.FilmCountry" FromRole="Film" ToRole="Country" />
+    <NavigationProperty Name="Genres" Relationship="Self.FilmGenre" FromRole="Film" ToRole="Genre" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Film_session">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FilmId" Type="Int32" />
+    <Property Name="Slot" Type="DateTime" Precision="3" />
+    <Property Name="HallId" Type="Int32" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <NavigationProperty Name="Film" Relationship="Self.FK_Film_session_Film" FromRole="Film_session" ToRole="Film" />
+    <NavigationProperty Name="Hall" Relationship="Self.FK_Film_session_Hall" FromRole="Film_session" ToRole="Hall" />
+  </EntityType>
+  <EntityType Name="Genre">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Films" Relationship="Self.FilmGenre" FromRole="Genre" ToRole="Film" />
+  </EntityType>
+  <EntityType Name="Hall">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Film_session" Relationship="Self.FK_Film_session_Hall" FromRole="Hall" ToRole="Film_session" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecondName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SetOfRole" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Film_session_Film">
+    <End Role="Film" Type="Self.Film" Multiplicity="0..1" />
+    <End Role="Film_session" Type="Self.Film_session" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Film">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Film_session">
+        <PropertyRef Name="FilmId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Film_session_Hall">
+    <End Role="Hall" Type="Self.Hall" Multiplicity="0..1" />
+    <End Role="Film_session" Type="Self.Film_session" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hall">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Film_session">
+        <PropertyRef Name="HallId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FilmCountry">
+    <End Role="Country" Type="Self.Country" Multiplicity="*" />
+    <End Role="Film" Type="Self.Film" Multiplicity="*" />
+  </Association>
+  <Association Name="FilmGenre">
+    <End Role="Film" Type="Self.Film" Multiplicity="*" />
+    <End Role="Genre" Type="Self.Genre" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="CinemaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Countries" EntityType="Self.Country" />
+    <EntitySet Name="Films" EntityType="Self.Film" />
+    <EntitySet Name="Film_sessions" EntityType="Self.Film_session" />
+    <EntitySet Name="Genres" EntityType="Self.Genre" />
+    <EntitySet Name="Halls" EntityType="Self.Hall" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_Film_session_Film" Association="Self.FK_Film_session_Film">
+      <End Role="Film" EntitySet="Films" />
+      <End Role="Film_session" EntitySet="Film_sessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Film_session_Hall" Association="Self.FK_Film_session_Hall">
+      <End Role="Hall" EntitySet="Halls" />
+      <End Role="Film_session" EntitySet="Film_sessions" />
+    </AssociationSet>
+    <AssociationSet Name="FilmCountry" Association="Self.FilmCountry">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Film" EntitySet="Films" />
+    </AssociationSet>
+    <AssociationSet Name="FilmGenre" Association="Self.FilmGenre">
+      <End Role="Film" EntitySet="Films" />
+      <End Role="Genre" EntitySet="Genres" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,6 @@
+D:\lllikusia\CinemaN3\Cinema.EnF\bin\Debug\Cinema.EnF.dll
+D:\lllikusia\CinemaN3\Cinema.EnF\bin\Debug\Cinema.EnF.pdb
+D:\lllikusia\CinemaN3\Cinema.EnF\obj\Debug\Cinema.EnF.csprojResolveAssemblyReference.cache
+D:\lllikusia\CinemaN3\Cinema.EnF\obj\Debug\Cinema.EnF.csproj.CoreCompileInputs.cache
+D:\lllikusia\CinemaN3\Cinema.EnF\obj\Debug\Cinema.EnF.dll
+D:\lllikusia\CinemaN3\Cinema.EnF\obj\Debug\Cinema.EnF.pdb

@@ -1,0 +1,15 @@
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\obj\Debug\Cinema.BuisnessLogics.csproj.CoreCompileInputs.cache
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\bin\Debug\Cinema.BuisnessLogics.dll
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\bin\Debug\Cinema.BuisnessLogics.pdb
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\bin\Debug\Cinema.EF.dll
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\bin\Debug\EntityFramework.dll
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\bin\Debug\Cinema.EF.pdb
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\bin\Debug\Cinema.EF.dll.config
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\bin\Debug\EntityFramework.xml
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\obj\Debug\Cinema.BuisnessLogics.csprojResolveAssemblyReference.cache
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\obj\Debug\Cinema.BuisnessLogics.csproj.CopyComplete
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\obj\Debug\Cinema.BuisnessLogics.dll
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\obj\Debug\Cinema.BuisnessLogics.pdb
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\bin\Debug\Cinema.BuisnessLogics.dll.config
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\bin\Debug\EntityFramework.SqlServer.dll
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogics\bin\Debug\EntityFramework.SqlServer.xml

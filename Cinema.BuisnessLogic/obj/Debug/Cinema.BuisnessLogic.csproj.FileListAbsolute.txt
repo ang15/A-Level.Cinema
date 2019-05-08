@@ -1,0 +1,4 @@
+D:\A_level\SomeProjTry3\CinemaN3\Cinema.BuisnessLogic\obj\Debug\Cinema.BuisnessLogic.csprojAssemblyReference.cache
+D:\A_level\SomeProjTry3\CinemaN3\Cinema.BuisnessLogic\obj\Debug\Cinema.BuisnessLogic.csproj.CoreCompileInputs.cache
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogic\obj\Debug\Cinema.BuisnessLogic.csprojResolveAssemblyReference.cache
+D:\lllikusia\CinemaN3\Cinema.BuisnessLogic\obj\Debug\Cinema.BuisnessLogic.csproj.CoreCompileInputs.cache

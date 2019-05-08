@@ -1,0 +1,10 @@
+﻿@model Cinema.EF.DataModel.Film
+
+<h2>Add</h2>
+@using (Html.BeginForm("Add", "Film", FormMethod.Post))
+{
+    @Html.Partial("Parttials/Film")
+
+    <input type="submit" name="Добавить" />
+}
+

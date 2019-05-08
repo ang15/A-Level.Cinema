@@ -1,0 +1,12 @@
+D:\A_level\SomeProjTry3\CinemaN3\Cinema.DataBase\bin\Debug\Cinema.DataBase.dacpac
+D:\A_level\SomeProjTry3\CinemaN3\Cinema.DataBase\bin\Debug\Cinema.DataBase.dll
+D:\A_level\SomeProjTry3\CinemaN3\Cinema.DataBase\bin\Debug\Cinema.DataBase.pdb
+D:\A_level\SomeProjTry3\CinemaN3\Cinema.DataBase\obj\Debug\Cinema.DataBase.sqlprojAssemblyReference.cache
+D:\A_level\SomeProjTry3\CinemaN3\Cinema.DataBase\obj\Debug\Cinema.DataBase.dll
+D:\A_level\SomeProjTry3\CinemaN3\Cinema.DataBase\obj\Debug\Cinema.DataBase.pdb
+D:\lllikusia\CinemaN3\Cinema.DataBase\bin\Debug\Cinema.DataBase.dacpac
+D:\lllikusia\CinemaN3\Cinema.DataBase\bin\Debug\Cinema.DataBase.dll
+D:\lllikusia\CinemaN3\Cinema.DataBase\bin\Debug\Cinema.DataBase.pdb
+D:\lllikusia\CinemaN3\Cinema.DataBase\obj\Debug\Cinema.DataBase.sqlprojResolveAssemblyReference.cache
+D:\lllikusia\CinemaN3\Cinema.DataBase\obj\Debug\Cinema.DataBase.dll
+D:\lllikusia\CinemaN3\Cinema.DataBase\obj\Debug\Cinema.DataBase.pdb

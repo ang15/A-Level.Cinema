@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Cinema.Models.Models.FilmView>
+
+
+@{ 
+    ViewBag.Title = "Index";
+}
+
+<h2>Film</h2>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    @{ 
+        foreach (var filmView in Model)
+        {
+            <ul>
+                <li>
+                
+                <a>@filmView.Name</a>
+                
+                </li>
+                
+            </ul>
+        }
+    }
+</body>

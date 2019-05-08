@@ -1,0 +1,7 @@
+@foreach (var film in Model)
+{
+
+    <br />
+   @Html.BeginForm("GetOneImg", "film", routeValues: new { id = film.Id })) 
+
+}
